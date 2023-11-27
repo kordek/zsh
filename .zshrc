@@ -1,6 +1,7 @@
 bindkey -v
 
 fpath+=("$ZDOTDIR/prompts/pure")
+fpath+=("$ZDOTDIR/lib")
 
 autoload -U promptinit; promptinit
 prompt pure
@@ -18,11 +19,18 @@ export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 
 eval "$(direnv hook zsh)"
 
+. $ZDOTDIR/aliases.zsh
+
+ 
 . "$HOME/.asdf/asdf.sh"
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
+
+# Load git helpers
+autoload -Uz git-interactive-checkout
+autoload -Uz git-interactive-delete
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

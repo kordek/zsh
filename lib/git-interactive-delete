@@ -1,0 +1,2 @@
+git branch -D $(git for-each-ref refs/heads/ --format='%(refname:short)' | fzf)
+
