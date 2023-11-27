@@ -2,6 +2,8 @@ bindkey -v
 
 fpath+=("$ZDOTDIR/prompts/pure")
 fpath+=("$ZDOTDIR/lib")
+BREW_PREFIX=$(brew --prefix)
+fpath+=(${BREW_PREFIX}/share/zsh/site-functions)
 
 autoload -U promptinit; promptinit
 prompt pure

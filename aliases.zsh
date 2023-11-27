@@ -6,4 +6,3 @@ alias lg='lazygit'
 # Vim
 alias vim='nvim'
 alias vzf='nvim $(fzf)'
-alias vimdiff='nvim -d'
