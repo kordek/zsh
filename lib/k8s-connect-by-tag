@@ -1,0 +1,3 @@
+pod=$(kubectl get pods -l app.kubernetes.io/name=$1 -o jsonpath='{.items[0].metadata.name}')
+kubectl exec --stdin --tty $pod --container $1 -- /bin/bash
+

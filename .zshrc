@@ -21,6 +21,8 @@ autoload -Uz compinit && compinit
 # Load git helpers
 autoload -Uz git-interactive-checkout
 autoload -Uz git-interactive-delete
+autoload -Uz git-delete-stale-branches
+autoload -Uz k8s-connect-by-tag
 
 for file in $ZDOTDIR/rc/*.zsh(.); do
     . $file
