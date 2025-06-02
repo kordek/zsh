@@ -9,7 +9,8 @@ fpath+=(${BREW_PREFIX}/share/zsh/site-functions)
 autoload -U promptinit; promptinit
 prompt pure
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 eval "$(direnv hook zsh)"
 
