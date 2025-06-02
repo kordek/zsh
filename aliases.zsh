@@ -10,3 +10,5 @@ alias vzf='nvim $(fzf)'
 
 # Other
 alias mtf='mix test $(find test -name "*test.exs" | fzf)'
+
+alias czf='cd $(fzf --walker=dir)'
